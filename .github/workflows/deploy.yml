@@ -3,13 +3,13 @@ name: 部署到 Cloudflare Workers
 on:
   push:
     branches: [ main ]
-    workflow_dispatch:   # 建议加这一行，可以手动触发，方便调试
     paths:
       - 'worker.js'
       - 'wrangler.toml'
       - 'package.json'
       - '.github/workflows/deploy.yml'
-
+  workflow_dispatch:
+  
 jobs:
   deploy:  # job ID 必须使用英文
     runs-on: ubuntu-latest
