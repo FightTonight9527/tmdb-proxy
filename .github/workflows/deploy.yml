@@ -3,7 +3,7 @@ name: 部署到 Cloudflare Workers
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:   # 建议加这一行，可以手动触发，方便调试
+    workflow_dispatch:   # 建议加这一行，可以手动触发，方便调试
     paths:
       - 'worker.js'
       - 'wrangler.toml'
